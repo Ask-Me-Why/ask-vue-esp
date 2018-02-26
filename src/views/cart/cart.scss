@@ -1,0 +1,21 @@
+/*
+* @Author: askMeWhy
+* @Date:   2017-10-16 16:46:09
+* @Last Modified by:   bigWave
+* @Last Modified time: 2017-10-17 11:04:58
+*/
+@import '~@/styles/mixins', '~@/styles/variables';
+.cart.boundary{
+	.nothing{
+		text-align: center;
+		.ask-button{
+			margin: 10px 0;
+			background-color: map-get($color,100);
+			padding: 20px 40px;
+			min-width: auto;
+			border-radius: 10px;
+			color: map-get($color,200);
+			font-weight: 600;
+		}
+	}
+}

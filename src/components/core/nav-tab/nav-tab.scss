@@ -1,0 +1,47 @@
+@import '~@/styles/mixins', '~@/styles/variables';
+nav {
+	width: 100%;
+	background-color: map-get($color, 700);
+	&.scroll-fixed{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 999;
+	}
+	.esp-nav {
+		padding: 0;
+		@include flexLayout(flex, center, normal);
+		.en-li {
+			font-size: 1.8rem;
+			padding: 12px 12px;
+			cursor: pointer;
+			-webkit-transition: color .3s linear;
+			transition: color .3s linear;
+			color: map-get($color, 200);
+			i.iconfont {
+				font-size: 1.8rem;
+				display: inline-block;
+				margin-right: 6px;
+			}
+			.ask-button{
+				font-size: 1.8rem;
+				text-decoration: none;
+				color: map-get($color, 200);
+			}
+			&:hover, &:hover .ask-button, &.active, &.active .ask-button {
+				-webkit-transition: color .3s linear;
+				transition: color .3s linear;
+				color: map-get($color, 300);
+			}
+			&.right {
+				margin-left: auto;
+				i.iconfont {
+					-webkit-transform: translateY(-2px);
+					transform: translateY(-2px);
+				}
+			}
+		}
+	}
+}
